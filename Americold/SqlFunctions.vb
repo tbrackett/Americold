@@ -1,0 +1,3 @@
+﻿Module SqlFunctions
+
+End Module
