@@ -1,14 +1,6 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.Security.Cryptography
 Imports System.IO
-Imports System.Security
-Imports System.Windows.Forms.DataGridView
-Imports System.Windows.Forms.DataGrid
-Imports Microsoft.Office.Interop
-Imports Microsoft.Office.Interop.Excel
-Imports Microsoft.Office
-Imports Microsoft.Office.Core
 
 Public Class frmMain
     Dim employeeInitials As String
@@ -56,7 +48,7 @@ Public Class frmMain
         Dim accountFileString As String
         Dim enteredInfoString As String
 
-        accountFilePath = "C:\Users\TJB\Documents\Visual Studio 2015\Projects\Americold\Employee Accounts"
+        accountFilePath = "C:\Users\tbrac\Documents\GitHub\Americold\Employee Accounts"
 
         'Gets entered account info as hash
         byHashedData = md5Hasher.ComputeHash(encoder.GetBytes(strPW & accountName))
@@ -193,13 +185,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'AC_DBDataSet.Burn_Time_Log' table. You can move, or remove it, as needed.
-        Me.Burn_Time_LogTableAdapter.Fill(Me.AC_DBDataSet.Burn_Time_Log)
-        'TODO: This line of code loads data into the 'AC_DBDataSet.Truck_Log' table. You can move, or remove it, as needed.
-        Me.Truck_LogTableAdapter.Fill(Me.AC_DBDataSet.Truck_Log)
 
-    End Sub
 
     Private Sub tabBurnTimeLog_Click(sender As Object, e As EventArgs) Handles tabBurnTimeLog.Click
 

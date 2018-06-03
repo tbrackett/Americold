@@ -21,7 +21,7 @@ Public Class frmCreateAccount
         lastName = txtCALastName.Text.ToLower
         username = txtCAUsername.Text
         fileName = username
-        Dim path As String = "C:\Users\TJB\Documents\Visual Studio 2015\Projects\Americold\Employee Accounts"
+        Dim path As String = "C:\Users\tbrac\Documents\GitHub\Americold\Employee Accounts"
         Dim fs As FileStream = File.Create(path & "\" & fileName)
 
         If txtCAPWCreate.Text = txtCAPWConfirm.Text Then
@@ -32,7 +32,6 @@ Public Class frmCreateAccount
             MessageBox.Show("Your account name is " & username & " your password is " & strPW & ".")
             frmMain.Show()
             Me.Close()
-        ElseIf 
         Else
             MessageBox.Show("The passwords you have entered do not match.")
             txtCAFirstName.Text = ""

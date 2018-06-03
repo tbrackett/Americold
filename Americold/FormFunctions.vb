@@ -5,10 +5,7 @@ Imports System.IO
 Imports System.Security
 Imports System.Windows.Forms.DataGridView
 Imports System.Windows.Forms.DataGrid
-Imports Microsoft.Office.Interop
-Imports Microsoft.Office.Interop.Excel
-Imports Microsoft.Office
-Imports Microsoft.Office.Core
+
 
 Public Module FormFunctions
 

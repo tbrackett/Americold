@@ -25,6 +25,17 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Me.tabLogs = New System.Windows.Forms.TabControl()
         Me.tabBurnTimeLog = New System.Windows.Forms.TabPage()
+        Me.dtpTLDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvBTLInfo = New System.Windows.Forms.DataGridView()
         Me.clmBLCompany = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmBLTrailer = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,19 +47,7 @@ Partial Class frmMain
         Me.clmBLOutInitials = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmBLPU = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmBLDO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CarrierDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TruckNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TrailerNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InInitialsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OutTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OutDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OutInitialsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BurnTimeLogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ACDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AC_DBDataSet = New WindowsApplication1.AC_DBDataSet()
         Me.txtTLTime = New System.Windows.Forms.TextBox()
         Me.btnTLEdit = New System.Windows.Forms.Button()
         Me.dgvTLInfo = New System.Windows.Forms.DataGridView()
@@ -67,20 +66,6 @@ Partial Class frmMain
         Me.clmTLTime = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmTLDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmTLInitials = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CarrierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TruckNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TrailerNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PickDropDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DoorNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ConfNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SealNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SetTempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurrentTempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InitialsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TruckLogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTLSubmit = New System.Windows.Forms.Button()
         Me.txtTLCurrentTemp = New System.Windows.Forms.TextBox()
@@ -122,25 +107,10 @@ Partial Class frmMain
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblMainLogin = New System.Windows.Forms.Label()
         Me.EventLog1 = New System.Diagnostics.EventLog()
-        Me.Truck_LogTableAdapter = New WindowsApplication1.AC_DBDataSetTableAdapters.Truck_LogTableAdapter()
-        Me.Burn_Time_LogTableAdapter = New WindowsApplication1.AC_DBDataSetTableAdapters.Burn_Time_LogTableAdapter()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.dtpTLDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.tabLogs.SuspendLayout()
         Me.tabBurnTimeLog.SuspendLayout()
         CType(Me.dgvBTLInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BurnTimeLogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ACDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AC_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvTLInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TruckLogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabPassdownLog.SuspendLayout()
@@ -202,6 +172,106 @@ Partial Class frmMain
         Me.tabBurnTimeLog.Text = "Burn Time Log"
         Me.tabBurnTimeLog.UseVisualStyleBackColor = True
         '
+        'dtpTLDate
+        '
+        Me.dtpTLDate.CustomFormat = "MM/dd/yyyy"
+        Me.dtpTLDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpTLDate.Location = New System.Drawing.Point(841, 29)
+        Me.dtpTLDate.Name = "dtpTLDate"
+        Me.dtpTLDate.Size = New System.Drawing.Size(116, 20)
+        Me.dtpTLDate.TabIndex = 34
+        Me.dtpTLDate.Value = New Date(2017, 12, 2, 15, 51, 13, 0)
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(639, 10)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(53, 13)
+        Me.Label10.TabIndex = 33
+        Me.Label10.Text = "Set Temp"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(523, 10)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(38, 13)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "Seal #"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(716, 10)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(71, 13)
+        Me.Label11.TabIndex = 33
+        Me.Label11.Text = "Current Temp"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(838, 10)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(30, 13)
+        Me.Label12.TabIndex = 33
+        Me.Label12.Text = "Date"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(792, 10)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(30, 13)
+        Me.Label8.TabIndex = 33
+        Me.Label8.Text = "Time"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(465, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 33
+        Me.Label7.Text = "Conf #"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(422, 10)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.TabIndex = 33
+        Me.Label4.Text = "Door"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(271, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
+        Me.Label3.TabIndex = 33
+        Me.Label3.Text = "Trailer #"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(178, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "Truck #"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(68, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 33
+        Me.Label1.Text = "Carrier"
+        '
         'dgvBTLInfo
         '
         Me.dgvBTLInfo.AllowUserToDeleteRows = False
@@ -210,11 +280,9 @@ Partial Class frmMain
         Me.dgvBTLInfo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvBTLInfo.AutoGenerateColumns = False
         Me.dgvBTLInfo.ColumnHeadersHeight = 40
         Me.dgvBTLInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvBTLInfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmBLCompany, Me.clmBLTrailer, Me.clmBLInDate, Me.clmBLInTime, Me.clmBLInInitials, Me.clmBLOutDate, Me.clmBLOutTime, Me.clmBLOutInitials, Me.clmBLPU, Me.clmBLDO, Me.IDDataGridViewTextBoxColumn1, Me.CarrierDataGridViewTextBoxColumn1, Me.TruckNumberDataGridViewTextBoxColumn1, Me.TrailerNumberDataGridViewTextBoxColumn1, Me.InTimeDataGridViewTextBoxColumn, Me.InDateDataGridViewTextBoxColumn, Me.InInitialsDataGridViewTextBoxColumn, Me.OutTimeDataGridViewTextBoxColumn, Me.OutDateDataGridViewTextBoxColumn, Me.OutInitialsDataGridViewTextBoxColumn})
-        Me.dgvBTLInfo.DataSource = Me.BurnTimeLogBindingSource
+        Me.dgvBTLInfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmBLCompany, Me.clmBLTrailer, Me.clmBLInDate, Me.clmBLInTime, Me.clmBLInInitials, Me.clmBLOutDate, Me.clmBLOutTime, Me.clmBLOutInitials, Me.clmBLPU, Me.clmBLDO})
         Me.dgvBTLInfo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvBTLInfo.Location = New System.Drawing.Point(3, 324)
         Me.dgvBTLInfo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -292,80 +360,9 @@ Partial Class frmMain
         Me.clmBLDO.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.clmBLDO.Width = 75
         '
-        'IDDataGridViewTextBoxColumn1
-        '
-        Me.IDDataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn1.Name = "IDDataGridViewTextBoxColumn1"
-        '
-        'CarrierDataGridViewTextBoxColumn1
-        '
-        Me.CarrierDataGridViewTextBoxColumn1.DataPropertyName = "Carrier"
-        Me.CarrierDataGridViewTextBoxColumn1.HeaderText = "Carrier"
-        Me.CarrierDataGridViewTextBoxColumn1.Name = "CarrierDataGridViewTextBoxColumn1"
-        '
-        'TruckNumberDataGridViewTextBoxColumn1
-        '
-        Me.TruckNumberDataGridViewTextBoxColumn1.DataPropertyName = "TruckNumber"
-        Me.TruckNumberDataGridViewTextBoxColumn1.HeaderText = "TruckNumber"
-        Me.TruckNumberDataGridViewTextBoxColumn1.Name = "TruckNumberDataGridViewTextBoxColumn1"
-        '
-        'TrailerNumberDataGridViewTextBoxColumn1
-        '
-        Me.TrailerNumberDataGridViewTextBoxColumn1.DataPropertyName = "TrailerNumber"
-        Me.TrailerNumberDataGridViewTextBoxColumn1.HeaderText = "TrailerNumber"
-        Me.TrailerNumberDataGridViewTextBoxColumn1.Name = "TrailerNumberDataGridViewTextBoxColumn1"
-        '
-        'InTimeDataGridViewTextBoxColumn
-        '
-        Me.InTimeDataGridViewTextBoxColumn.DataPropertyName = "InTime"
-        Me.InTimeDataGridViewTextBoxColumn.HeaderText = "InTime"
-        Me.InTimeDataGridViewTextBoxColumn.Name = "InTimeDataGridViewTextBoxColumn"
-        '
-        'InDateDataGridViewTextBoxColumn
-        '
-        Me.InDateDataGridViewTextBoxColumn.DataPropertyName = "InDate"
-        Me.InDateDataGridViewTextBoxColumn.HeaderText = "InDate"
-        Me.InDateDataGridViewTextBoxColumn.Name = "InDateDataGridViewTextBoxColumn"
-        '
-        'InInitialsDataGridViewTextBoxColumn
-        '
-        Me.InInitialsDataGridViewTextBoxColumn.DataPropertyName = "InInitials"
-        Me.InInitialsDataGridViewTextBoxColumn.HeaderText = "InInitials"
-        Me.InInitialsDataGridViewTextBoxColumn.Name = "InInitialsDataGridViewTextBoxColumn"
-        '
-        'OutTimeDataGridViewTextBoxColumn
-        '
-        Me.OutTimeDataGridViewTextBoxColumn.DataPropertyName = "OutTime"
-        Me.OutTimeDataGridViewTextBoxColumn.HeaderText = "OutTime"
-        Me.OutTimeDataGridViewTextBoxColumn.Name = "OutTimeDataGridViewTextBoxColumn"
-        '
-        'OutDateDataGridViewTextBoxColumn
-        '
-        Me.OutDateDataGridViewTextBoxColumn.DataPropertyName = "OutDate"
-        Me.OutDateDataGridViewTextBoxColumn.HeaderText = "OutDate"
-        Me.OutDateDataGridViewTextBoxColumn.Name = "OutDateDataGridViewTextBoxColumn"
-        '
-        'OutInitialsDataGridViewTextBoxColumn
-        '
-        Me.OutInitialsDataGridViewTextBoxColumn.DataPropertyName = "OutInitials"
-        Me.OutInitialsDataGridViewTextBoxColumn.HeaderText = "OutInitials"
-        Me.OutInitialsDataGridViewTextBoxColumn.Name = "OutInitialsDataGridViewTextBoxColumn"
-        '
         'BurnTimeLogBindingSource
         '
         Me.BurnTimeLogBindingSource.DataMember = "Burn Time Log"
-        Me.BurnTimeLogBindingSource.DataSource = Me.ACDBDataSetBindingSource
-        '
-        'ACDBDataSetBindingSource
-        '
-        Me.ACDBDataSetBindingSource.DataSource = Me.AC_DBDataSet
-        Me.ACDBDataSetBindingSource.Position = 0
-        '
-        'AC_DBDataSet
-        '
-        Me.AC_DBDataSet.DataSetName = "AC_DBDataSet"
-        Me.AC_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtTLTime
         '
@@ -393,11 +390,9 @@ Partial Class frmMain
         Me.dgvTLInfo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvTLInfo.AutoGenerateColumns = False
         Me.dgvTLInfo.ColumnHeadersHeight = 40
         Me.dgvTLInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvTLInfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmTLIn, Me.clmTLOut, Me.clmTLCarrier, Me.clmTLTruck, Me.clmTLTrailer, Me.clmTLPU, Me.clmTLDO, Me.clmTLDoor, Me.clmTLConf, Me.clmTLSeal, Me.clmTLSetTemp, Me.clmTLTemp, Me.clmTLTime, Me.clmTLDate, Me.clmTLInitials, Me.IDDataGridViewTextBoxColumn, Me.CarrierDataGridViewTextBoxColumn, Me.TruckNumberDataGridViewTextBoxColumn, Me.TrailerNumberDataGridViewTextBoxColumn, Me.InOutDataGridViewTextBoxColumn, Me.PickDropDataGridViewTextBoxColumn, Me.DoorNumberDataGridViewTextBoxColumn, Me.ConfNumberDataGridViewTextBoxColumn, Me.SealNumberDataGridViewTextBoxColumn, Me.SetTempDataGridViewTextBoxColumn, Me.CurrentTempDataGridViewTextBoxColumn, Me.TimeDataGridViewTextBoxColumn, Me.DateDataGridViewTextBoxColumn, Me.InitialsDataGridViewTextBoxColumn})
-        Me.dgvTLInfo.DataSource = Me.TruckLogBindingSource
+        Me.dgvTLInfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmTLIn, Me.clmTLOut, Me.clmTLCarrier, Me.clmTLTruck, Me.clmTLTrailer, Me.clmTLPU, Me.clmTLDO, Me.clmTLDoor, Me.clmTLConf, Me.clmTLSeal, Me.clmTLSetTemp, Me.clmTLTemp, Me.clmTLTime, Me.clmTLDate, Me.clmTLInitials})
         Me.dgvTLInfo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvTLInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.dgvTLInfo.Location = New System.Drawing.Point(4, 58)
@@ -505,94 +500,9 @@ Partial Class frmMain
         Me.clmTLInitials.Name = "clmTLInitials"
         Me.clmTLInitials.Width = 50
         '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        '
-        'CarrierDataGridViewTextBoxColumn
-        '
-        Me.CarrierDataGridViewTextBoxColumn.DataPropertyName = "Carrier"
-        Me.CarrierDataGridViewTextBoxColumn.HeaderText = "Carrier"
-        Me.CarrierDataGridViewTextBoxColumn.Name = "CarrierDataGridViewTextBoxColumn"
-        '
-        'TruckNumberDataGridViewTextBoxColumn
-        '
-        Me.TruckNumberDataGridViewTextBoxColumn.DataPropertyName = "TruckNumber"
-        Me.TruckNumberDataGridViewTextBoxColumn.HeaderText = "TruckNumber"
-        Me.TruckNumberDataGridViewTextBoxColumn.Name = "TruckNumberDataGridViewTextBoxColumn"
-        '
-        'TrailerNumberDataGridViewTextBoxColumn
-        '
-        Me.TrailerNumberDataGridViewTextBoxColumn.DataPropertyName = "TrailerNumber"
-        Me.TrailerNumberDataGridViewTextBoxColumn.HeaderText = "TrailerNumber"
-        Me.TrailerNumberDataGridViewTextBoxColumn.Name = "TrailerNumberDataGridViewTextBoxColumn"
-        '
-        'InOutDataGridViewTextBoxColumn
-        '
-        Me.InOutDataGridViewTextBoxColumn.DataPropertyName = "In/Out"
-        Me.InOutDataGridViewTextBoxColumn.HeaderText = "In/Out"
-        Me.InOutDataGridViewTextBoxColumn.Name = "InOutDataGridViewTextBoxColumn"
-        '
-        'PickDropDataGridViewTextBoxColumn
-        '
-        Me.PickDropDataGridViewTextBoxColumn.DataPropertyName = "Pick/Drop"
-        Me.PickDropDataGridViewTextBoxColumn.HeaderText = "Pick/Drop"
-        Me.PickDropDataGridViewTextBoxColumn.Name = "PickDropDataGridViewTextBoxColumn"
-        '
-        'DoorNumberDataGridViewTextBoxColumn
-        '
-        Me.DoorNumberDataGridViewTextBoxColumn.DataPropertyName = "DoorNumber"
-        Me.DoorNumberDataGridViewTextBoxColumn.HeaderText = "DoorNumber"
-        Me.DoorNumberDataGridViewTextBoxColumn.Name = "DoorNumberDataGridViewTextBoxColumn"
-        '
-        'ConfNumberDataGridViewTextBoxColumn
-        '
-        Me.ConfNumberDataGridViewTextBoxColumn.DataPropertyName = "ConfNumber"
-        Me.ConfNumberDataGridViewTextBoxColumn.HeaderText = "ConfNumber"
-        Me.ConfNumberDataGridViewTextBoxColumn.Name = "ConfNumberDataGridViewTextBoxColumn"
-        '
-        'SealNumberDataGridViewTextBoxColumn
-        '
-        Me.SealNumberDataGridViewTextBoxColumn.DataPropertyName = "SealNumber"
-        Me.SealNumberDataGridViewTextBoxColumn.HeaderText = "SealNumber"
-        Me.SealNumberDataGridViewTextBoxColumn.Name = "SealNumberDataGridViewTextBoxColumn"
-        '
-        'SetTempDataGridViewTextBoxColumn
-        '
-        Me.SetTempDataGridViewTextBoxColumn.DataPropertyName = "SetTemp"
-        Me.SetTempDataGridViewTextBoxColumn.HeaderText = "SetTemp"
-        Me.SetTempDataGridViewTextBoxColumn.Name = "SetTempDataGridViewTextBoxColumn"
-        '
-        'CurrentTempDataGridViewTextBoxColumn
-        '
-        Me.CurrentTempDataGridViewTextBoxColumn.DataPropertyName = "CurrentTemp"
-        Me.CurrentTempDataGridViewTextBoxColumn.HeaderText = "CurrentTemp"
-        Me.CurrentTempDataGridViewTextBoxColumn.Name = "CurrentTempDataGridViewTextBoxColumn"
-        '
-        'TimeDataGridViewTextBoxColumn
-        '
-        Me.TimeDataGridViewTextBoxColumn.DataPropertyName = "Time"
-        Me.TimeDataGridViewTextBoxColumn.HeaderText = "Time"
-        Me.TimeDataGridViewTextBoxColumn.Name = "TimeDataGridViewTextBoxColumn"
-        '
-        'DateDataGridViewTextBoxColumn
-        '
-        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "Date"
-        Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
-        '
-        'InitialsDataGridViewTextBoxColumn
-        '
-        Me.InitialsDataGridViewTextBoxColumn.DataPropertyName = "Initials"
-        Me.InitialsDataGridViewTextBoxColumn.HeaderText = "Initials"
-        Me.InitialsDataGridViewTextBoxColumn.Name = "InitialsDataGridViewTextBoxColumn"
-        '
         'TruckLogBindingSource
         '
         Me.TruckLogBindingSource.DataMember = "Truck Log"
-        Me.TruckLogBindingSource.DataSource = Me.ACDBDataSetBindingSource
         '
         'txtTLSubmit
         '
@@ -735,7 +645,7 @@ Partial Class frmMain
         Me.tabPassdownLog.Location = New System.Drawing.Point(4, 22)
         Me.tabPassdownLog.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabPassdownLog.Name = "tabPassdownLog"
-        Me.tabPassdownLog.Size = New System.Drawing.Size(1051, 613)
+        Me.tabPassdownLog.Size = New System.Drawing.Size(1092, 613)
         Me.tabPassdownLog.TabIndex = 2
         Me.tabPassdownLog.Text = "Passdown Log"
         Me.tabPassdownLog.UseVisualStyleBackColor = True
@@ -768,7 +678,7 @@ Partial Class frmMain
         Me.rtbPDLPastEntries.Location = New System.Drawing.Point(4, 4)
         Me.rtbPDLPastEntries.Margin = New System.Windows.Forms.Padding(4)
         Me.rtbPDLPastEntries.Name = "rtbPDLPastEntries"
-        Me.rtbPDLPastEntries.Size = New System.Drawing.Size(509, 421)
+        Me.rtbPDLPastEntries.Size = New System.Drawing.Size(550, 421)
         Me.rtbPDLPastEntries.TabIndex = 4
         Me.rtbPDLPastEntries.Text = ""
         '
@@ -786,7 +696,7 @@ Partial Class frmMain
         'btnPDLSubmit
         '
         Me.btnPDLSubmit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPDLSubmit.Location = New System.Drawing.Point(874, 554)
+        Me.btnPDLSubmit.Location = New System.Drawing.Point(915, 554)
         Me.btnPDLSubmit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPDLSubmit.Name = "btnPDLSubmit"
         Me.btnPDLSubmit.Size = New System.Drawing.Size(173, 55)
@@ -803,7 +713,7 @@ Partial Class frmMain
         Me.lstPDLEntries.Location = New System.Drawing.Point(4, 459)
         Me.lstPDLEntries.Margin = New System.Windows.Forms.Padding(4)
         Me.lstPDLEntries.Name = "lstPDLEntries"
-        Me.lstPDLEntries.Size = New System.Drawing.Size(509, 82)
+        Me.lstPDLEntries.Size = New System.Drawing.Size(550, 82)
         Me.lstPDLEntries.TabIndex = 1
         '
         'rtbPDLEntry
@@ -814,7 +724,7 @@ Partial Class frmMain
         Me.rtbPDLEntry.Location = New System.Drawing.Point(524, 4)
         Me.rtbPDLEntry.Margin = New System.Windows.Forms.Padding(4)
         Me.rtbPDLEntry.Name = "rtbPDLEntry"
-        Me.rtbPDLEntry.Size = New System.Drawing.Size(523, 537)
+        Me.rtbPDLEntry.Size = New System.Drawing.Size(564, 537)
         Me.rtbPDLEntry.TabIndex = 0
         Me.rtbPDLEntry.Text = ""
         '
@@ -963,114 +873,6 @@ Partial Class frmMain
         Me.EventLog1.Log = "Application"
         Me.EventLog1.SynchronizingObject = Me
         '
-        'Truck_LogTableAdapter
-        '
-        Me.Truck_LogTableAdapter.ClearBeforeFill = True
-        '
-        'Burn_Time_LogTableAdapter
-        '
-        Me.Burn_Time_LogTableAdapter.ClearBeforeFill = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(68, 10)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
-        Me.Label1.TabIndex = 33
-        Me.Label1.Text = "Carrier"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(178, 10)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
-        Me.Label2.TabIndex = 33
-        Me.Label2.Text = "Truck #"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(271, 10)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 13)
-        Me.Label3.TabIndex = 33
-        Me.Label3.Text = "Trailer #"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(422, 10)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 13)
-        Me.Label4.TabIndex = 33
-        Me.Label4.Text = "Door"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(465, 10)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 13)
-        Me.Label7.TabIndex = 33
-        Me.Label7.Text = "Conf #"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(792, 10)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(30, 13)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "Time"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(523, 10)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(38, 13)
-        Me.Label9.TabIndex = 33
-        Me.Label9.Text = "Seal #"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(639, 10)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(53, 13)
-        Me.Label10.TabIndex = 33
-        Me.Label10.Text = "Set Temp"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(716, 10)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(71, 13)
-        Me.Label11.TabIndex = 33
-        Me.Label11.Text = "Current Temp"
-        '
-        'dtpTLDate
-        '
-        Me.dtpTLDate.CustomFormat = "MM/dd/yyyy"
-        Me.dtpTLDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpTLDate.Location = New System.Drawing.Point(841, 29)
-        Me.dtpTLDate.Name = "dtpTLDate"
-        Me.dtpTLDate.Size = New System.Drawing.Size(116, 20)
-        Me.dtpTLDate.TabIndex = 34
-        Me.dtpTLDate.Value = New Date(2017, 12, 2, 15, 51, 13, 0)
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(838, 10)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(30, 13)
-        Me.Label12.TabIndex = 33
-        Me.Label12.Text = "Date"
-        '
         'frmMain
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -1087,7 +889,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.Calendar)
         Me.Controls.Add(Me.tabLogs)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
@@ -1095,14 +896,11 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Americold Security Logs"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.tabLogs.ResumeLayout(False)
         Me.tabBurnTimeLog.ResumeLayout(False)
         Me.tabBurnTimeLog.PerformLayout()
         CType(Me.dgvBTLInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BurnTimeLogBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ACDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AC_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTLInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TruckLogBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabPassdownLog.ResumeLayout(False)
@@ -1185,10 +983,7 @@ Partial Class frmMain
     Friend WithEvents txtTLCompany As System.Windows.Forms.TextBox
     Friend WithEvents radTLOut As RadioButton
     Friend WithEvents radTLIn As RadioButton
-    Friend WithEvents ACDBDataSetBindingSource As BindingSource
-    Friend WithEvents AC_DBDataSet As AC_DBDataSet
     Friend WithEvents TruckLogBindingSource As BindingSource
-    Friend WithEvents Truck_LogTableAdapter As AC_DBDataSetTableAdapters.Truck_LogTableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CarrierDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TruckNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1204,7 +999,6 @@ Partial Class frmMain
     Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents InitialsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BurnTimeLogBindingSource As BindingSource
-    Friend WithEvents Burn_Time_LogTableAdapter As AC_DBDataSetTableAdapters.Burn_Time_LogTableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents CarrierDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents TruckNumberDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
